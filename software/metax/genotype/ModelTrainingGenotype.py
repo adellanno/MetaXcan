@@ -16,7 +16,7 @@ def model_training_file_geno_lines(file, snp_annotation, snps=None):
         for i,line in enumerate(file):
             if i==0: continue
             comps = line.strip().split()
-            id = comps[0]
+            id = comps[0].decode("utf-8")
 
             if not id  in snp_annotation:
                 continue
